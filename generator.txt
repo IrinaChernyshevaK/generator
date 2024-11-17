@@ -1,0 +1,11 @@
+def all_variants(text):
+    for i in range(len(text)+1):
+        for j in range(len(text)+1):
+            for l in range(j):
+                if len(text[l:j])==i:
+                    yield text[l:j]
+
+
+a = all_variants("abc")
+for i in a:
+    print(i)
